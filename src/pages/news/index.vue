@@ -1,3 +1,16 @@
+<script lang="ts" setup>
+import { ref } from 'vue'
+// const { setPageConfig, showNotify } = usePageStore()
+
+const news = ref()
+uni.request({
+  url: 'https://api.devibe.cn/v1/articles',
+  success: ({ data }) => {
+    news.value = (data as any).data
+  },
+})
+</script>
+
 <template>
   <view class="article">
     <uni-list>
@@ -9,25 +22,11 @@
         :thumb="n.cover"
         thumb-size="lg"
         ellipsis="1"
-        :rightText="n.author.name"
+        :right-text="n.author.name"
         :to="`/pages/article/index?id=${n._id}`"
-      >
-      </uni-list-item>
+      />
     </uni-list>
   </view>
 </template>
-
-<script lang="ts" setup>
-  import { ref } from 'vue';
-  // const { setPageConfig, showNotify } = usePageStore()
-
-  const news = ref();
-  uni.request({
-    url: 'https://api.devibe.cn/v1/articles',
-    success: ({ data }) => {
-      news.value = (data as any).data;
-    },
-  });
-</script>
 
 <style scoped></style>
