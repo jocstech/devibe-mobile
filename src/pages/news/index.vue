@@ -1,9 +1,31 @@
 <template>
   <view class="article">
-    <text class="text-2xl">News</text>
+    <uni-list>
+      <uni-list-item
+        v-for="n in news"
+        :key="n._id"
+        :title="n.title"
+        :note="n.subtitle"
+        :thumb="n.cover"
+        thumb-size="lg"
+        :rightText="n.author.name"
+      >
+      </uni-list-item>
+    </uni-list>
   </view>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+  import { ref } from 'vue';
+  // const { setPageConfig, showNotify } = usePageStore()
+
+  const news = ref();
+  uni.request({
+    url: 'https://api.devibe.cn/v1/articles',
+    success: ({ data }) => {
+      news.value = (data as any).data;
+    },
+  });
+</script>
 
 <style scoped></style>
