@@ -8,7 +8,9 @@
         :note="n.subtitle"
         :thumb="n.cover"
         thumb-size="lg"
+        ellipsis="1"
         :rightText="n.author.name"
+        :to="`/pages/article/index?id=${n._id}`"
       >
       </uni-list-item>
     </uni-list>

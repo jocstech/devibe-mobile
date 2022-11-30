@@ -1,5 +1,8 @@
 <template>
   <view class="content">
+    <uni-nav-bar title="导航栏组件1"></uni-nav-bar>
+    <uni-nav-bar title="导航栏组件2"></uni-nav-bar>
+    <uni-nav-bar title="导航栏组件3"></uni-nav-bar>
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <uni-card
