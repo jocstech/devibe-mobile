@@ -1,10 +1,9 @@
-import { defineConfig } from 'unocss'
+import { defineConfig } from "unocss";
 import {
   transformerAttributify,
   transformerClass,
-} from 'unocss-preset-weapp/transformer'
-import presetWeapp from 'unocss-preset-weapp'
-
+} from "unocss-preset-weapp/transformer";
+import presetWeapp from "unocss-preset-weapp";
 
 export default defineConfig({
   presets: [
@@ -21,4 +20,4 @@ export default defineConfig({
     // options https://github.com/MellowCo/unocss-preset-weapp/tree/main/src/transformer/transformerClass
     transformerClass(),
   ],
-})
+});
