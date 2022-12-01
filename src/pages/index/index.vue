@@ -24,7 +24,7 @@ const title = ref('Hello')
   </view>
 </template>
 
-<style>
+<style scoped lang="scss">
 .content {
   display: flex;
   flex-direction: column;
