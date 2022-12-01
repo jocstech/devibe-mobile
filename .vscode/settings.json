@@ -30,6 +30,10 @@
     "jsonc",
     "yaml"
   ],
-  "cSpell.words": ["dcloudio", "Weapp"],
+  "cSpell.words": [
+    "dcloudio",
+    "Weapp",
+    "wxml"
+  ],
   "i18n-ally.localesPaths": ["src/locales"]
 }

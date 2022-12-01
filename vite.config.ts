@@ -2,7 +2,7 @@ import path from 'node:path';
 import type { ConfigEnv, UserConfig } from 'vite';
 import { defineConfig, loadEnv } from 'vite';
 import uni from '@dcloudio/vite-plugin-uni';
-// import UnoCSS from 'unocss/vite'
+import WindiCSS from 'vite-plugin-windicss';
 import AutoImport from 'unplugin-auto-import/vite';
 
 // https://vitejs.dev/config/
@@ -19,8 +19,8 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         dirs: ['src/composables', 'src/stores'],
         vueTemplate: true,
       }),
+      WindiCSS(),
       uni(),
-      // UnoCSS(),
     ],
     resolve: {
       alias: [
