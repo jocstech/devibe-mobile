@@ -3,5 +3,7 @@
   "singleQuote": true,
   "jsxSingleQuote": true,
   "endOfLine": "lf",
-  "trailingComma": "es5"
+  "trailingComma": "es5",
+  "printWidth": 120,
+  "vueIndentScriptAndStyle": true
 }

@@ -1,3 +1,6 @@
 {
-  "extends": "@xbmlz"
+  "extends": "@xbmlz",
+  "rules": {
+    "no-console":"off"
+  }
 }

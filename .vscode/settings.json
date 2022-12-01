@@ -27,5 +27,12 @@
     "json5",
     "jsonc",
     "yaml"
+  ],
+  "cSpell.words": [
+    "dcloudio",
+    "Weapp"
+  ],
+  "i18n-ally.localesPaths": [
+    "src/locales"
   ]
 }

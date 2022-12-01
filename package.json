@@ -1,6 +1,6 @@
 {
-  "name": "uni-preset-vue",
-  "version": "0.0.0",
+  "name": "devibe-mobile",
+  "version": "0.0.1",
   "scripts": {
     "dev:app": "uni -p app",
     "dev:app-android": "uni -p app-android",
@@ -50,7 +50,6 @@
     "@dcloudio/uni-quickapp-webview": "3.0.0-3060520221121001",
     "@dcloudio/uni-ui": "^1.4.23",
     "@vueuse/core": "^9.6.0",
-    "add": "^2.0.6",
     "pinia": "^2.0.27",
     "vue": "^3.2.45",
     "vue-i18n": "^9.1.9"
@@ -67,11 +66,10 @@
     "eslint": "^8.28.0",
     "postcss": "^8.4.19",
     "sass": "^1.56.1",
-    "sass-loader": "^10.1.1",
     "terser": "^5.16.0",
     "typescript": "^4.8.4",
+    "unocss": "^0.47.4",
     "unplugin-auto-import": "^0.12.0",
-    "vite": "^3.2.4",
-    "webpack": "^5.0.0"
+    "vite": "^3.2.4"
   }
 }
