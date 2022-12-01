@@ -1,4 +1,4 @@
-import { isObject } from './is'
+import { isObject } from './is';
 
 /**
  * Add the object as a parameter to the URL
@@ -11,18 +11,22 @@ import { isObject } from './is'
  *  ==>www.baidu.com?a=3&b=4
  */
 export function setObjToUrlParams(baseUrl: string, obj: any): string {
-  let parameters = ''
+  let parameters = '';
   for (const key in obj)
-    parameters += `${key}=${encodeURIComponent(obj[key])}&`
+    parameters += `${key}=${encodeURIComponent(obj[key])}&`;
 
-  parameters = parameters.replace(/&$/, '')
-  return /\?$/.test(baseUrl) ? baseUrl + parameters : baseUrl.replace(/\/?$/, '?') + parameters
+  parameters = parameters.replace(/&$/, '');
+  return /\?$/.test(baseUrl)
+    ? baseUrl + parameters
+    : baseUrl.replace(/\/?$/, '?') + parameters;
 }
 
 export function deepMerge<T = any>(src: any = {}, target: any = {}): T {
-  let key: string
+  let key: string;
   for (key in target)
-    src[key] = isObject(src[key]) ? deepMerge(src[key], target[key]) : (src[key] = target[key])
+    src[key] = isObject(src[key])
+      ? deepMerge(src[key], target[key])
+      : (src[key] = target[key]);
 
-  return src
+  return src;
 }
