@@ -15,8 +15,8 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
     plugins: [
       AutoImport({
         imports: ['vue', '@vueuse/core', 'pinia', 'uni-app'],
+        dirs: ['src/composables', 'src/stores', 'src/apis'],
         dts: 'src/auto-imports.d.ts',
-        dirs: ['src/composables', 'src/stores'],
         vueTemplate: true,
       }),
       WindiCSS(),

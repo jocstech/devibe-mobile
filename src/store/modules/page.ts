@@ -1,4 +1,4 @@
-import pinia from "~/store";
+import store from '~/store';
 
 interface PageConfig {
   showNavBar?: boolean;
@@ -7,18 +7,18 @@ interface PageConfig {
   pageTitle?: string;
 }
 
-export const usePageStore = defineStore("page", () => {
+export const usePageStore = defineStore('page', () => {
   const showNavBar = ref(true);
   const showBackAction = ref(false);
   const showCustomAction = ref(false);
-  const pageTitle = ref("");
+  const pageTitle = ref('');
 
   const setPageConfig = (config: PageConfig) => {
     const {
       showNavBar: _showNavBar = true,
       showBackAction: _showBackAction = false,
       showCustomAction: _showCustomAction = false,
-      pageTitle: _pageTitle = "",
+      pageTitle: _pageTitle = '',
     } = config;
 
     showNavBar.value = _showNavBar;
@@ -31,7 +31,7 @@ export const usePageStore = defineStore("page", () => {
     showNavBar.value = true;
     showBackAction.value = false;
     showCustomAction.value = false;
-    pageTitle.value = "";
+    pageTitle.value = '';
   };
 
   return {
@@ -46,5 +46,5 @@ export const usePageStore = defineStore("page", () => {
 
 // Need to be used outside the setup
 export function usePageStoreWidthOut() {
-  return usePageStore(pinia);
+  return usePageStore(store);
 }

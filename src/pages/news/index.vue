@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const news = ref();
 uni.request({
-  url: 'https://api.devibe.cn/v1/articles',
+  url: 'https://api.devibe.cn/v1/articles/list',
   success: ({ data }) => {
     news.value = (data as any).data;
   },

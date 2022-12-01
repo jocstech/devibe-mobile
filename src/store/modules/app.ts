@@ -1,4 +1,4 @@
-import pinia from "~/store";
+import store from '~/store';
 
 interface MenuButtonBoundingClientRect {
   width: number;
@@ -9,7 +9,7 @@ interface MenuButtonBoundingClientRect {
   bottom: number;
 }
 
-export const useAppStore = defineStore("app", () => {
+export const useAppStore = defineStore('app', () => {
   const darkMode = ref(false);
   const statusBarHeight = ref(0);
   const menuButtonBounding = ref<MenuButtonBoundingClientRect>();
@@ -31,5 +31,5 @@ export const useAppStore = defineStore("app", () => {
 
 // Need to be used outside the setup
 export function useAppStoreWidthOut() {
-  return useAppStore(pinia);
+  return useAppStore(store);
 }
